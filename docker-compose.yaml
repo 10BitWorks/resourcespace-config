@@ -12,13 +12,18 @@ services:
       - resourcespace-net
     ports:
       - "8085:80"
+    environment:
+      - RS_DB_HOST=resourcespace-db
+      - RS_DB_NAME=${MYSQL_DATABASE}
+      - RS_DB_USER=${MYSQL_USER}
+      - RS_DB_PASSWORD=${MYSQL_PASSWORD}
 
   resourcespace-db:
     image: mariadb:10.11
     container_name: resourcespace-db
     restart: unless-stopped
     env_file:
-      - db.env
+      - .env
     volumes:
       - resourcespace_db_data:/var/lib/mysql
     networks:
