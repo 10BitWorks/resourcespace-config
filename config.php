@@ -91,3 +91,6 @@ $wordpress_sso_auto_create = true;
 $wordpress_sso_auto_approve = true;
 # The default usergroup ID for auto-created users (2 usually corresponds to General Users)
 $wordpress_sso_auto_create_group = 2;
+
+# Allow standard login page alongside SSO
+$wordpress_sso_allow_standard_login = true;
