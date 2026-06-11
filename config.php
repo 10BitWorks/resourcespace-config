@@ -95,6 +95,10 @@ $wordpress_sso_auto_create_group = 2;
 # Allow standard login page alongside SSO
 $wordpress_sso_allow_standard_login = true;
 
+# Enable debug logging to troubleshoot CSRF
+$debug_log = true;
+$debug_log_location = "/var/www/html/filestore/tmp/debug.txt";
+
 # Trust reverse proxy forwarding headers for CSRF/CORS checks
 $CORS_whitelist = array('https://marketing.10bitworks.org');
 # Enable reverse proxy IP detection
