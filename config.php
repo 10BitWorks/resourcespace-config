@@ -94,3 +94,8 @@ $wordpress_sso_auto_create_group = 2;
 
 # Allow standard login page alongside SSO
 $wordpress_sso_allow_standard_login = true;
+
+# Trust reverse proxy forwarding headers for CSRF/CORS checks
+$CORS_whitelist = array('https://marketing.10bitworks.org');
+# Enable reverse proxy IP detection
+$reverse_proxy_header = 'HTTP_X_FORWARDED_FOR';
