@@ -10,6 +10,8 @@ services:
       - ./config.php:/var/www/html/include/config.php
     networks:
       - resourcespace-net
+    expose:
+      - "80"
     environment:
       - RS_DB_HOST=resourcespace-db
       - RS_DB_NAME=${MYSQL_DATABASE}
