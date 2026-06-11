@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Fix permissions for the mounted filestore
+chown -R www-data:www-data /var/www/html/filestore
+
 # Start cron service
 service cron start
 
