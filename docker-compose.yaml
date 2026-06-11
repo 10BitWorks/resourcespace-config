@@ -12,8 +12,6 @@ services:
       - resourcespace-net
     expose:
       - "80"
-    labels:
-      - "traefik.docker.network=x12zicz0wdr62gvgtzfl9vwb"
     environment:
       - RS_DB_HOST=resourcespace-db
       - RS_DB_NAME=${MYSQL_DATABASE}
