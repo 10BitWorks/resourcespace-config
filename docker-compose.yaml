@@ -17,6 +17,7 @@ services:
       - RS_DB_NAME=${MYSQL_DATABASE}
       - RS_DB_USER=${MYSQL_USER}
       - RS_DB_PASSWORD=${MYSQL_PASSWORD}
+      - WP_SSO_SECRET=${WP_SSO_SECRET:-10bitworks_sso_fallback_secret_change_me}
 
   resourcespace-db:
     image: mariadb:10.11

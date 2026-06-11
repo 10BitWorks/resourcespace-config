@@ -81,3 +81,13 @@ $hide_real_filepath = true;
 $annotate_enabled = true;
 
 $plugins[] = "brand_guidelines";
+$plugins[] = "wordpress_sso";
+
+# WordPress SSO Configuration
+$wordpress_sso_url = 'https://10bitworks.org';
+# Using a shared secret read from environment to avoid hardcoding in git
+$wordpress_sso_secret = getenv('WP_SSO_SECRET') ?: '10bitworks_sso_fallback_secret_change_me';
+$wordpress_sso_auto_create = true;
+$wordpress_sso_auto_approve = true;
+# The default usergroup ID for auto-created users (2 usually corresponds to General Users)
+$wordpress_sso_auto_create_group = 2;
